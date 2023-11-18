@@ -21,6 +21,7 @@ body {
 
 .image-vector {
   width: 50vw;
+  /* margin-left: 50px; */
   height: 50vh;
   background: url(./undraw_upload_re_pasx.svg) no-repeat center;
   background-size: contain;
@@ -197,7 +198,7 @@ body,
 
 .email-container form {
   border: 2px solid var(--border-color);
-  width: 100%;
+  /* width: 100%; */
   padding: 15px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -259,16 +260,33 @@ body,
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
     0px 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: transform ease-in-out 0.2s;
+  display: none;
 }
 
 .show.toast {
   transform: translate(50%, 0);
 }
 
+.footer {
+  background-color: var(--main-bg-color);
+  color: var(--light-blue);
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 25px;
+}
 @media screen and (max-width: 900px) {
   :root {
-    --container-width: 320px;
+    --container-width: 310px;
   }
+
+  .logo {
+    width: 100px;
+  }
+
   .image-vector {
     display: none;
   }
@@ -277,5 +295,29 @@ body,
   }
   .email-container .filed {
     width: 300px;
+  }
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --container-width: 300px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .image-vector {
+    display: none;
+  }
+  .email-container label,
+  .email-container input {
+    font-size: 10px;
+  }
+  .footer {
+    display: none;
   }
 }

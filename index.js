@@ -177,6 +177,7 @@ let toastTimer;
 // Function to display a toast message
 const showToast = (msg) => {
     clearTimeout(toastTimer);
+    toast.style.display = "block";
     toast.innerText = msg;
     toast.classList.add("show");
     toastTimer = setTimeout(() => {
